@@ -12,8 +12,9 @@ def create_app():
     allowed_origins = [
         'http://localhost:3001',
         'http://localhost:3000',
-        'https://career-guider.vercel.app',
-        'https://*.vercel.app'
+        'https://career-guider-amber.vercel.app',  # ✅ Your Vercel frontend
+        'https://*.vercel.app',
+        'https://career-guider-api.onrender.com'  # ✅ ADD THIS - Your Render backend
     ]
     
     CORS(app,
@@ -42,3 +43,4 @@ def create_app():
         return {'status': 'healthy'}, 200
     
     return app
+
